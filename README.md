@@ -6,5 +6,5 @@ The start of a project for Runes of Magic players who frequently use the transpo
 
 
 There are currently two planned options:
-  - cheapest route (least amount of gold or total journey)
+  - cheapest route (least amount of gold for total journey)
   - quickest route (fewest steps, may not be cheapest way)
