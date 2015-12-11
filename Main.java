@@ -121,9 +121,7 @@ public class Main {
 	frame.setVisible(true);
     }
 
-
-    //-------------------------------------------------------------------------
-
+    
 
     /**
      * Starts the program. The list of transporters is loaded and then the Main 
