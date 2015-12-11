@@ -1,0 +1,27 @@
+[
+	{
+		"location":"Varanas",
+		"coordinates":"(48.3, 78.4)",
+		"transports-to": [
+			{
+				"to-location":"Silverfall",
+				"price":"250"
+			},
+			{
+				"to-location":"Obsidian Stronghold",
+				"price":"50"
+			},
+		]
+	},
+	{
+		"location":"Silverfall",
+		"coordinates":"(53.0, 67.0)",
+		"transports-to": [
+			{
+				"to-location":"Harf Trading Post",
+				"price":"500"
+			},
+		]
+	},
+]
+	
