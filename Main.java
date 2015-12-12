@@ -10,6 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 
 public class Main {
@@ -145,6 +147,13 @@ public class Main {
 	transporters = t.parseFromFile("src/transporters.json");
 	//TODO: call method to sort transporters by alphabetical order
 	//TODO: rename TransporterParser to TransporterUtils
+	
+	// look and feel closer to what users are used to
+	try {
+	    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+	} catch (IllegalAccessException | InstantiationException
+		| ClassNotFoundException | UnsupportedLookAndFeelException e) {
+	}	
 	
 	EventQueue.invokeLater(new Runnable() {
 	    public void run() {
