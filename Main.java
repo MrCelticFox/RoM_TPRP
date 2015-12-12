@@ -4,6 +4,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -12,14 +13,23 @@ import javax.swing.JLabel;
 
 
 public class Main {
+    private static ArrayList<Transporter> transporters;
+    
+    
+    
     /**
      * Creates the UI, all components are defined in the natural reading order
      * (left to right, top to bottom) unless otherwise specified.
      */
     private static void create() {
+	// list of locations to choose from is generated based on the ArrayList
+	String locations[] = new String[transporters.size()];
+	for (int i=0; i<transporters.size(); i++)
+	    locations[i] = transporters.get(i).toStringShort();
+	
 	JFrame frame;
 	frame = new JFrame();
-	frame.setBounds(100, 100, 450, 300);
+	frame.setBounds(100, 100, 500, 300);
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
 	GridBagLayout gridBagLayout = new GridBagLayout();
@@ -51,7 +61,6 @@ public class Main {
 	gbc_opt2_lbl.gridy = 1;
 	frame.getContentPane().add(opt2_lbl, gbc_opt2_lbl);
 
-	String locations[] = {"one", "two", "3"}; //define elsewhere
 	final JComboBox<String> start = new JComboBox<String>(locations);
 	GridBagConstraints gbc_start = new GridBagConstraints();
 	gbc_start.insets = new Insets(10, 10, 10, 10);
@@ -92,7 +101,7 @@ public class Main {
 	frame.getContentPane().add(type, gbc_type);
 
 	// label for the results, text will be set when the user presses the submit button
-	final JLabel results_lbl = new JLabel("");  
+	final JLabel results_lbl = new JLabel("");  //TODO: label no good, use smth else
 	GridBagConstraints gbc_results_lbl = new GridBagConstraints();
 	gbc_results_lbl.insets = new Insets(10, 10, 10, 10);
 	gbc_results_lbl.gridwidth = 3;
@@ -105,8 +114,10 @@ public class Main {
 	submit.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 		String path = "";
-		path = path + start.getItemAt(start.getSelectedIndex()) + "\n";
-		path = path + destination.getItemAt(destination.getSelectedIndex()) + "\n";
+		int a = start.getSelectedIndex();
+		int b = destination.getSelectedIndex();
+		path += transporters.get(a).goesTo().get(1).get(Transporter.TAG_PLACE) + "\n";
+		path += transporters.get(b).goesTo().get(0).get(Transporter.TAG_PLACE) + "\n";
 		results_lbl.setText(path);
 		// TODO: replace contents with pathGenerator method
 	    }
@@ -130,7 +141,10 @@ public class Main {
      * @param args not used
      */
     public static void main(String[] args) {
-	// TODO: implement transporter loading
+	TransporterParser t = new TransporterParser();
+	transporters = t.parseFromFile("src/transporters.json");
+	//TODO: call method to sort transporters by alphabetical order
+	//TODO: rename TransporterParser to TransporterUtils
 	
 	EventQueue.invokeLater(new Runnable() {
 	    public void run() {
