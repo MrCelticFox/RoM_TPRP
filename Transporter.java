@@ -37,7 +37,16 @@ public class Transporter {
     
     
     /**
-     * Returns a String representing the Transporter
+     * Returns a String with only the location and coordinates of the Transporter
+     */
+    public String toStringShort() {
+	return location + " " + coords ;
+    }
+    
+    
+    
+    /**
+     * Returns a String representing the Transporter object
      */
     public String toString() {
 	return location + "\n" + coords + "\n" + transports_to;

@@ -41,7 +41,7 @@ public class TransporterParser {
 
 	    Iterator<JSONObject> iterator = jsonArray.iterator();
 	    while (iterator.hasNext()) {
-		JSONObject jobj = iterator.next();;
+		JSONObject jobj = iterator.next();
 		String location = (String) jobj.get(Transporter.TAG_LOCATION);
 		String coords = (String) jobj.get(Transporter.TAG_COORDS);
 		ArrayList<HashMap<String, String>> transports_to = new ArrayList<HashMap<String, String>>();
