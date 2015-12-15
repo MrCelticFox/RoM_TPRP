@@ -1,26 +1,257 @@
 [
 	{
-		"location":"Varanas",
-		"coordinates":"(48.3, 78.4)",
+		"location":"Logar",
+		"coordinates":"(46.9, 37.3)",
 		"transports-to": [
 			{
 				"to-location":"Silverfall",
-				"price":"250"
+				"price":"-1"
 			},
-			{
-				"to-location":"Obsidian Stronghold",
-				"price":"50"
-			},
+		]
+	},
+	{
+		"location":"Varanas Gates",
+		"coordinates":"(48.3, 78.4)",
+		"transports-to": [
+
 		]
 	},
 	{
 		"location":"Silverfall",
 		"coordinates":"(53.0, 67.0)",
 		"transports-to": [
-			{
-				"to-location":"Harf Trading Post",
-				"price":"500"
-			},
+
+		]
+	},
+	{
+		"location":"Obsidian Stronghold",
+		"coordinates":"(75.5, 19.0)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Reifort Camp",
+		"coordinates":"(57.8, 36.7)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Ayren Caravan",
+		"coordinates":"(25.4, 35.1)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Lyk",
+		"coordinates":"(?, ?)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Harf Trading Post",
+		"coordinates":"(46.4, 20.3)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Abandoned Fortress",
+		"coordinates":"(45.9, 53.8)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Boulderwind Village",
+		"coordinates":"(56.0, 44.8)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Green Tower",
+		"coordinates":"(73.5, 51.2)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Dimarka",
+		"coordinates":"(61.7, 70.2)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Dalanis",
+		"coordinates":"(54.8, 58.3)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Kandor",
+		"coordinates":"(34.7, 54.3)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Rh'anka Village",
+		"coordinates":"(51.6, 53.7)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Kingdom of Limon",
+		"coordinates":"(30.1, 53.4)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Kampel Town",
+		"coordinates":"(63.1, 39.7)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Fireboot Fortress",
+		"coordinates":"(29.7, 40.7)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Torag Caravan",
+		"coordinates":"(63.9, 53.9)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Ancient Kingdom of Rorazan",
+		"coordinates":"(35.9, 58.3)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Sagthorne Camp",
+		"coordinates":"(36.6 39.0)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Cadoon",
+		"coordinates":"(41.1, 40.7)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Hyern Village",
+		"coordinates":"(45.6, 64.1)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Wall of Patrace",
+		"coordinates":"(54.3, 26.5)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Muckgale Port",
+		"coordinates":"(26.3, 72.1)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Leorden Stronghold",
+		"coordinates":"(74.3, 19.8)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Pioneer's Colony",
+		"coordinates":"(12.7, 62.9)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Hovic's Camp",
+		"coordinates":"(68.8, 70.9)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Brinewind Castle",
+		"coordinates":"(52.7, 58.6)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Heffner Camp",
+		"coordinates":"(37.8, 62.8)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Lyonsyde Tribe",
+		"coordinates":"(59.0, 50.4)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Desert Investigation Post",
+		"coordinates":"(34.3, 40.2)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Fanger's Makeshif Camp",
+		"coordinates":"(58.9, 23.1)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Ruins Research Camp",
+		"coordinates":"(34.1, 10.2)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Jinner's Camp",
+		"coordinates":"(81.9, 71.7)",
+		"transports-to": [
+
+		]
+	},
+	{
+		"location":"Frontline Camp",
+		"coordinates":"(57.4, 48.3)",
+		"transports-to": [
+
 		]
 	},
 ]
