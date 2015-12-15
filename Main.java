@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -8,8 +9,12 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -102,14 +107,21 @@ public class Main {
 	gbc_type.gridy = 3;
 	frame.getContentPane().add(type, gbc_type);
 
-	// label for the results, text will be set when the user presses the submit button
-	final JLabel results_lbl = new JLabel("");  //TODO: label no good, use smth else
-	GridBagConstraints gbc_results_lbl = new GridBagConstraints();
-	gbc_results_lbl.insets = new Insets(10, 10, 10, 10);
-	gbc_results_lbl.gridwidth = 3;
-	gbc_results_lbl.gridx = 0;
-	gbc_results_lbl.gridy = 4;
-	frame.getContentPane().add(results_lbl, gbc_results_lbl);
+	// textarea for the results, text will be set when the user presses the submit button
+	final JTextArea results = new JTextArea();
+	results.setEditable(false);
+	results.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+	/*output = new JTextPane(); //Code for aligning if needed (untested)
+	SimpleAttributeSet attribs = new SimpleAttributeSet();
+	StyleConstants.setAlignment(attribs , StyleConstants.ALIGN_RIGHT);
+	output.setParagraphAttributes(attribs,true);*/
+	GridBagConstraints gbc_results = new GridBagConstraints();
+	gbc_results.insets = new Insets(10, 10, 10, 10);
+	gbc_results.fill = GridBagConstraints.BOTH;
+	gbc_results.gridwidth = 3;
+	gbc_results.gridx = 0;
+	gbc_results.gridy = 4;
+	frame.getContentPane().add(results, gbc_results);
 	
 	// needs to come after all the parts is uses are declared
 	JButton submit = new JButton("GO"); 
@@ -120,7 +132,7 @@ public class Main {
 		int b = destination.getSelectedIndex();
 		path += transporters.get(a).goesTo().get(1).get(Transporter.TAG_PLACE) + "\n";
 		path += transporters.get(b).goesTo().get(0).get(Transporter.TAG_PLACE) + "\n";
-		results_lbl.setText(path);
+		results.setText(path);
 		// TODO: replace contents with pathGenerator method
 	    }
 	});
