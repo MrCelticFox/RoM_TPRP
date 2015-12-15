@@ -37,6 +37,15 @@ public class Transporter {
     
     
     /**
+     * Returns the location of the transporter
+     */
+    public String getLocation() {
+	return location;
+    }
+    
+    
+    
+    /**
      * Returns a list of places this transporter goes to
      */
     public ArrayList<HashMap<String, String>> goesTo() {
