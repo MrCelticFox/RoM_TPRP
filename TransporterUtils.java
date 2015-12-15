@@ -14,11 +14,11 @@ import org.json.simple.parser.ParseException;
  * The TransporterParser is for any methods involving the conversion of JSON 
  * data to Transporter objects or vice versa.
  */
-public class TransporterParser {
+public class TransporterUtils {
     /**
      * Constructor, currently it does not do anything special
      */
-    public TransporterParser() {
+    public TransporterUtils() {
 
     }
 
