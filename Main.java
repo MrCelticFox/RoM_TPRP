@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -12,9 +11,7 @@ import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.JTextPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -155,10 +152,9 @@ public class Main {
      * @param args not used
      */
     public static void main(String[] args) {
-	TransporterParser t = new TransporterParser();
+	TransporterUtils t = new TransporterUtils();
 	transporters = t.parseFromFile("src/transporters.json");
-	//TODO: call method to sort transporters by alphabetical order
-	//TODO: rename TransporterParser to TransporterUtils
+	transporters = t.sortTransporters(transporters);
 	
 	// look and feel closer to what users are used to
 	try {
