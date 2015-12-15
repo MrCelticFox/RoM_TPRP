@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -51,7 +52,7 @@ public class TransporterUtils {
 		while (it.hasNext()) {
 		    JSONObject j = it.next(); 
 		    HashMap<String, String> map = new HashMap<String, String>();
-		    
+
 		    map.put(Transporter.TAG_PLACE, (String) j.get(Transporter.TAG_PLACE));
 		    map.put(Transporter.TAG_PRICE, (String) j.get(Transporter.TAG_PRICE));
 		    transports_to.add(map);
@@ -68,6 +69,33 @@ public class TransporterUtils {
 	}
 
 	return transporters;
+    }
+
+
+
+
+    /**
+     * Sorts an ArrayList of Transporter objects by alphabetical order (of their
+     * location)
+     * 
+     * @param tlist the ArrayList to be sorted
+     * @return the sorted ArrayList
+     */
+    public ArrayList<Transporter> sortTransporters(ArrayList<Transporter> tlist) {
+	tlist.sort(new TransporterComparator());
+	return tlist;
+    }
+    
+    
+    
+    /**
+     * Custom Comparator class for comparing Transporter objects
+     */
+    private class TransporterComparator implements Comparator<Transporter> {
+	@Override
+	public int compare(Transporter o1, Transporter o2) {
+	    return o1.getLocation().compareTo(o2.getLocation());
+	}
     }
 
 }
